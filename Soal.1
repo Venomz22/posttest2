@@ -1,0 +1,44 @@
+#1. Buatlah program sederhana konversi suhu dengan
+#menggunakan bahasa pemograman Python. Dengan kriteria
+#1. Fahrenheit ke Celsius
+#2. Kelvin ke Celsius
+#3. Reamur ke Celsius
+#Gunakan Variabel dan operasi Aritmatika
+
+#PROGRAM KONVERSI SUHU
+
+choice = "0"
+def choices():
+    print("|-------------------------------------------------------------|")
+    
+    print("""|    Pilih Konversi Suhu di bawah ini:                        |
+|    1. Fahrenheit ke Celsius                                 |
+|    2. Kelvin ke Celsius                                     |
+|    3. Reamur ke Celsius                                     |
+|    4. Keluar                                                |
+|-------------------------------------------------------------|
+    """)
+
+    choice = input("Pilih Konversi  : ")
+    return choice
+
+while choice != "4":
+  choice = choices()
+  if choice == "1":
+    fahrenheit = float(input("Masukan Suhu Fahrenheit  : "))
+    celcius = (5 / 9) * (fahrenheit - 32)
+    print ("suhu celcius :", celcius, "C")
+    print ("=========================================")
+
+  elif choice == "2":
+    kelvin = float(input("Masukan Suhu Kelvin : "))
+    celcius = kelvin - 273.15
+    print ("suhu Celcius :", celcius, "C")
+
+  elif choice == "3":
+    reamur = float(input("Masukan Suhu Reamur : "))
+    celcius = (5 / 4) * reamur
+    print ("suhu Celcius :", celcius, "C")
+
+  elif choice == "4":
+    print("Selamat Tinggal !")
