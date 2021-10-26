@@ -1,0 +1,63 @@
+#2. Buatlah Program sederhana tentang data Mahasiswa dengan
+#minimal 5 variabel inputan. contoh
+#1. Nama
+#2. Nim
+#3. dan seterusnya
+#Gunakan tipe data STR,INT,dan Float (wajib di pakai semua)
+#Simpan data mahasiswa di dalam list
+
+#program input 5 variabel
+
+choice = "0"
+
+siswa = {
+  "nama": "",
+  "nim": "",
+   "prodi": "",
+  "angkatan": 0,
+  "nilai apd": 0,
+}
+
+def choices():
+  print("""
+-----Data Mahasiswa-----
+
+Pilih menu di bawah ini:
+1. Lihat Info Mahasiswa
+2. Ganti Data Mahasiswa
+3. Keluar
+
+------------------------""")
+
+  choice = input("Pilih salah satu : ")
+
+  return choice
+
+while choice != "3":
+  choice = choices()
+  
+  if choice == "1":
+
+    print(f"""
+DATA MAHASISWA
+Nama Lengkap: {siswa["nama"]}
+NIM: {siswa["nim"]}
+Program Studi: {siswa["prodi"]}
+Angkatan: {siswa["angkatan"]}
+Nilai Algoritma Pemrograman Dasar : {float(siswa["nilai apd"])}
+  """)
+
+  elif choice == "2":
+
+    siswa["name"] = input("Masukkan Nama Lengkap: ")
+    siswa["nim"] = input("Masukkan NIM: ")
+    siswa["prodi"] = input("Masukkan Program Studi: ")
+    siswa["angkatan"] = input("Masukkan Angkatan: ")
+    siswa["nilai apd"] = input("Masukkan Nilai Algoritma Pemrograman Dasar: ")
+
+    print("===========================")
+    print("|Perubahan Telah Tersimpan|")
+    print("===========================")
+
+    print("silahkan di check ulang")
+print("Selamat Tinggal")
